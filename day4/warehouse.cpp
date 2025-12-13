@@ -40,8 +40,8 @@ Warehouse::Warehouse(std::string input) {
 std::vector<std::vector<char>> Warehouse::matrix() { return m_matrix; }
 
 void Warehouse::forEach(std::function<void(Position)> func) {
-  for (size_t row = 0; row < this->matrix().size(); row++) {
-    for (size_t col = 0; col < this->matrix().at(row).size(); col++) {
+  for (size_t row = 0; row < matrix().size(); row++) {
+    for (size_t col = 0; col < matrix().at(row).size(); col++) {
       Position p(row, col);
       func(p);
     }
@@ -61,13 +61,13 @@ char Warehouse::at(Position pos) {
 bool Warehouse::itemAt(Position pos) {
   if (isOutOfBounds(pos))
     throw OutOfBoundsException();
-  return this->at(pos) == m_item;
+  return at(pos) == m_item;
 }
 
 bool Warehouse::emptyAt(Position pos) {
   if (isOutOfBounds(pos))
     throw OutOfBoundsException();
-  return this->at(pos) == m_empty;
+  return at(pos) == m_empty;
 }
 
 bool Warehouse::forkliftReachable(Position pos) {

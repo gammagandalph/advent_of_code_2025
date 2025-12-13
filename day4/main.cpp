@@ -1,4 +1,6 @@
-#include "warehouse.hpp"
+#include "warehouse_v2.hpp"
+#include <cstddef>
+#include <cstring>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -13,8 +15,9 @@ int main(int argc, char *argv[]) {
   bool someRemoved = true;
   int totalRemoved = 0;
   do {
+    cout << w.toString() << endl;
     int count = 0;
-    w.forEach([&w, &count](Position pos) {
+    w.forEach([&w, &count](size_t pos) {
       if (w.forkliftReachable(pos)) {
         count++;
         w.remove(pos);

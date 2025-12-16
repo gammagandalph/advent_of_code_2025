@@ -42,8 +42,10 @@ bool isFresh(long id, std::vector<day5_range::Range<long>> ranges) {
 std::vector<day5_range::Range<long>>
 getFreshRanges(std::vector<day5_range::Range<long>> &ranges) {
   std::sort(ranges.begin(), ranges.end());
+
   std::vector<day5_range::Range<long>> result = {};
   day5_range::Range<long> buf = ranges.at(0);
+
   for (auto range = ranges.begin(); range < ranges.end(); ++range) {
     if (buf.overlap(*(range + 1))) {
       buf = buf.combineWith(*(range + 1));

@@ -1,5 +1,15 @@
+# Binaries
 */out
-.DS_Store
+*/obj
 *.out
 *.o
+
+# Ignore make files since we're generating them with premake
+*/Makefile
+*/**.make
+
+# mac filesystem stuff
+.DS_Store
+
+# ignore the input files for the AoC puzzle
 input*

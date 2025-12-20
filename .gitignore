@@ -12,7 +12,7 @@
 /.vs
 */.vs
 */**.sln
-*/**.vcxproj
+*/**.vcxproj*
 */UpgradeLog.htm*
 
 # mac filesystem stuff

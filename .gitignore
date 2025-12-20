@@ -13,6 +13,7 @@
 */.vs
 */**.sln
 */**.vcxproj
+*/UpgradeLog.htm*
 
 # mac filesystem stuff
 .DS_Store

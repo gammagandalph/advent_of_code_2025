@@ -8,8 +8,18 @@
 */Makefile
 */**.make
 
+# Ignore VS solution files see above
+/.vs
+*/.vs
+*/**.sln
+*/**.vcxproj
+
 # mac filesystem stuff
 .DS_Store
+
+# Ignore vscode files
+/.vscode
+*/.vscode
 
 # ignore the input files for the AoC puzzle
 input*
